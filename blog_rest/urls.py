@@ -23,7 +23,8 @@ print(settings)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls'))
+    path('api/blog/', include('blog.urls')),
+    path('api/', include('rest_framework.urls'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
     
