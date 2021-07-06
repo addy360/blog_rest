@@ -5,7 +5,7 @@ from django.db import models
 
 class BlogPics(models.Model):
     id = models.BigAutoField(primary_key=True)
-    image = models.ImageField('blog')
+    image = models.FileField(upload_to="blog")
 
     def __str__(self):
         return self.image.url
