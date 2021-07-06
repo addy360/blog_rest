@@ -1,6 +1,9 @@
 from blog.models import Blog, BlogPics
 from django.contrib import admin
 
+admin.site.site_header = "Welcome to blogging panel"
+admin.site.site_title = "Manage Blogs"
+
 # Register your models here.
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('title','slug', 'description')
